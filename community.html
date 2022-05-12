@@ -1,0 +1,200 @@
+ 
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="community.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container row">
+      <div class="page-title">
+        <h1>SKM Care</h1>
+        <div class="logo">
+          <img src="hospital logo.jpg">
+        </div>
+      </div>
+
+      <nav class="main-nav">
+       <a  class="active" href="home.html">HOME</a>
+  <a  class="active" href="services.html">SERVICES</a>
+  <a   class="active"href="contact.html">CONTACT</a>
+  <a class="active" href="community.html">COMMUNTIY</a>
+  <a class="active" href="videos.html">VIDEOS</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <img class="img1" src="compic.jpg">
+
+  <div class="expo-block">
+    <h2> community health</h2>
+    <p>Hospitals complement and amplify the effectiveness of many other parts of the health system, providing continuous availability of services for acute and complex conditions. Hospitals concentrate scarce resources within well-planned referral networks to respond efficiently to population health needs. They are an essential element of Universal Health Coverage and will be critical to meeting the Sustainable Development Goals.</p>
+  </div>
+
+      <div class="article-list group">
+      <figure class="article-info">
+        <img src="compic1.jpg">
+        <figcaption>Community people involvement in Health campaign</figcaption>
+      </figure>
+    </div>
+
+
+ 
+
+<div class="row clr">
+  <div class="column">
+    <img src="ser.jpg" alt="doctor face" width="200px" height="auto" class="center">
+    <h2>Community Services</h2>
+    <p>Pharmacy is the science and technique of preparing and dispensing drugs. It plays a vital role to ensure the safe and effective use of drugs. At SKM, the department has a team of 26 Pharmacists determined to go an extra mile to make the use of drugs for patients safer. “Good Pharmacy Practice” guidelines and legal requirements are strictly followed at zero tolerance in all pharmacy operations. Our Pharmacy infra-structure is well-designed to maintain the quality of sensitive items such as vaccines and life-saving drugs.
+
+With world class infra structure, the humidity, temperature and all other parameters are kept in standard at the pharmacy and the store so that the quality of sensitive drugs like vaccines, life-saving drugs and chemotherapeutic drugs are very well maintained. With the computerized record keeping and use of patient database, the appropriate drugs reach the admitted patients with almost zero chances of medicinal errors.
+
+The pharmacy at SKM is also the cornerstone of our Antibiotic Stewardship Program (ASP) which for the first time in the country has been implemented at our hospital.  ASP is a check mechanism which ensures that the antibiotics are used appropriately in the patients so that the drug resistance and hospital infections can be better controlled. </p>
+  </div>
+
+  <div class="column" >
+    <img src="out.jpg" alt="doctor face" width="200px" height="auto" class="center">
+    <h2>Out patients</h2>
+    <p>The Wellness Center at SKM Hospital offers a one-stop solution to health-screening needs and early identification and management of diseases. A team of Family Physicians do the initial workup and evaluation during the follow-up. Here you will find a wide variety of health screening packages that have been carefully designed.33 departments with highly trained doctors and paramedics ready to serve the most medical needs. Walk-in clinics are also available. Special International Patient Services desk specifically set up to help international patients receive treatment with ease.</p>
+  </div>
+  <div class="column" >
+    <img src="trainee.jpg" alt="doctor face" width="200px" height="auto" class="center">
+    <h2>Training and Learning</h2>
+    <p>In November 2015 we – Manuela Strack and Björn Rodday – travelled to Nepal as a film team for BKB Charity, and visited the Sushma Koirala Memorial (SKM) Hospital. This is a hospital in the small town of Sankhu, which is supported by German doctors.
+
+We were overpowered by all the impressions we encountered, and by how foreign aid comes to life there. When we were there, Nepal was still suffering from the consequences of the series of powerful earthquakes in April 2015 as well as from a blockade of the border region to India. Despite of this difficult situation, the people of Nepal were full of magnanimity, lust for life, and hospitality. In this way, we who came to help and as guests learned much that we were able to bring back home with us. We are deeply thankful for all those rich and multifaceted experiences.
+
+Most people do not have the financial means to afford medical care. Especially children are suffering heavily from that situation. The SKM Hospital counters this challenge, and treats the poorest of the poor often free of charge. This is possible only through donations and assistance from abroad – by organizations and initiatives like BKB Charity</p>
+  </div>
+
+ 
+
+  </div>
+
+
+
+<section class="appointment-box clearfix">
+  <h4>Appointment</h4>
+  <ul>
+  <li> Orthopedic surgeon Dr Laxman Rijal and Dr Nilesh Mishra. </li>
+<li>Dr Pratik Paudel, MD
+Physician</li>
+<li>Dr Jenu Suwal, MD,ENT clinic </li>
+<li>Dr Dinesh Koirala, MS, Pediatric Surgeon</li>
+<li>Dr Prakriti Karki, Obstetrician & Gynecologist</li>
+<li>Dr Krishna Budhathoki, Radiologis,Radiology and Ultrasound</li>
+</ul>
+
+<div id="appBox">
+  <div id="community">
+  </div>
+<div class="box">
+  <button onclick="up(event)">&#8593;</button><span id="hr"></span><button onclick="down(event)">&#8595;</button>
+
+</div>
+
+<div class="box">
+  <button onclick="up(event)">&#8593;</button><span id="min" ></span><button onclick="down(event)">&#8595;</button>
+  <br>
+
+
+</div>
+<input id="date" type="date" name="" min="">
+
+<button class="button"id="button">Submit</button>
+</div>
+</div>
+
+</section>
+
+
+<script type="text/javascript">
+  
+  var fulldate = new Date()
+  var sec = fulldate.getSeconds()
+  var min = fulldate.getMinutes()
+  var hr = fulldate.getHours()
+  var day = fulldate.getDate()
+  var month = fulldate.getMonth()
+  var year = fulldate.getFullYear()
+  var x = document.getElementById("community")
+  let content='';
+  fetch("http://localhost:3001/community")
+  .then(response=>response.json())
+  .then(data=>{
+    data.forEach(element => {
+      content+=`<label>${element.hour}.${element.min}.${element.month}.${element.day}.${element.year}`
+      
+  })
+  x.innerHTML = content;
+  })
+  date = `${year}-${month+1}-${day}`
+  console.log(date)
+  document.getElementById('hr').innerHTML = hr
+
+  document.getElementById('min').innerHTML = min
+
+  document.getElementById('date').setAttribute('min',date)
+
+  
+
+const submit= document.getElementById('button')
+submit.addEventListener('click',()=>{
+	alert('Thanks for submitting')
+	data={'hour':hr, 'min':min,'date':date}
+	localStorage.setItem('key',JSON.stringify(data))
+})
+
+  function up(e){
+    let x = e.target.parentElement.children[1]
+    let y = x.innerText
+    y++
+    if(x.getAttribute('id')== 'hr'){
+    if(y>24){
+      y=1
+    }
+  }
+  else{
+    if(y>60){
+      y=1
+    }
+  }
+    e.target.parentElement.children[1].innerHTML = y
+  }
+
+
+  function down(e){
+    console.log(down)
+    let x = e.target.parentElement.children[1]
+    let y = x.innerText
+    y--
+    if(x.getAttribute('id')== 'hr'){
+    if(y<1){
+      y=24
+    }
+  }
+  else{
+    if(y<1){
+      y=60
+    }
+  }
+    e.target.parentElement.children[1].innerHTML = y
+  }
+  const button=document.getElementById 
+
+
+</script>
+
+     <footer class="footer group">
+      <div class="copyright">Jimmy Shrestha Copyright &copy; 2020. All rights reserved</div>
+    
+</footer>
+</body>
+</html>

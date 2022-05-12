@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family:quicksand ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image:url("background.jpg");
+    background-size:cover;
+    background-position:fixed;
+  
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.main-header {
+    background-color: #23415C;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.main-header .row {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.page-title {
+    padding-right: 100px;
+    margin: 0;
+}
+
+.page-title h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.page-title, .main-nav a {
+    color: #fff;
+}
+
+.logo img{
+  float:left;
+  width:100px;
+  height:auto;
+  border-radius:20px;
+  padding:-10px;
+}
+
+.main-nav {
+   overflow:hidden;
+  word-spacing:70px;
+  float:right
+  margin:30px;
+  padding:20px;
+}
+
+.main-nav a {
+  float: left;
+  display:inline;
+  color: black;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+.main-nav a:hover {
+  color: black;
+  background-color: green;
+  border-radius:10px;
+}
+
+.main-nav a.active {
+  color: white;
+}
+
+
+
+img{
+  width:100%;
+  height:458px;
+  padding:10px;
+}
+
+.mainvids{
+  width: 100%;
+  text-align: center;
+
+}
+.video{
+  display:inline-block;
+ margin: auto;
+ width:30%;
+ margin-left: 2%;
+
+}
+
+.footer {
+    clear:both;
+     background-color: #23415C;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.copyright {
+      color: #fff;
+      text-align:center;
+    }
+
+    @media  screen and (max-width: 1000px) {
+      .video{
+        display: block;
+      }
+         @media only screen and (max-width: 800px){
+      .main-nav a{
+        width:100%;
+        text-align: center;
+        margin:10px;
+      }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container row">
+      <div class="page-title">
+        <h1>SKM Care</h1>
+        <div class="logo">
+          <img src="hospital logo.jpg">
+        </div>
+      </div>
+
+      <nav class="main-nav">
+       <a  class="active" href="home.html">HOME</a>
+  <a  class="active" href="services.html">SERVICES</a>
+  <a  class="active" href="contact.html">CONTACT</a>
+  <a class="active" href="community.html">COMMUNTIY</a>
+  <a class="active"href="videos.html">VIDEOS</a>
+      </nav>
+    </div>
+  </header>
+  <img class="img5" src="ambulance.jpg">
+  
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="contact us.jpg" alt="Contact" style="width:100%;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>CONTACT US</h1> 
+      <p>We are here to provide the best services</p> 
+      <h5>Address:Kathmandu,Nepal</h5>
+    <h5>Telephone:014414431</h5>
+    <h5> Emergency services No: 01220100</h5>
+  
+    </div>
+  </div>
+</div>
+
+<form class="my-form">
+
+  <h4> Contact Form
+    <P> You can contact us from here</P><h4>
+  	
+
+  <div class="form-group">
+    <label>First Name</label>
+    <input type="text"name="firstName" id="fname" placeholder="enter first name"required>
+
+    <label>Last Name</label>
+    <input type="text"name="lastName" id="lname" placeholder="enter last name"required>
+  </div>
+
+ <div class="form-group">
+   <label>Age</label>
+  <input type="number" min="0" max="100" id="age" placeholder="50" required>
+</div>
+
+    <div class="form-group" >
+   <label for="gender">Gender</label>
+   <select name="gender" id="gender">
+  <option label="Male" value="Male"id="male"></option>
+  <option label="Female" value="Female" id="female"></option>
+  </select>
+</div>
+
+    <div class="form-group">
+    <label>Email:</label>
+    <input type="text"name="Email" id="email">
+  </div>
+
+     <div class="form-group">
+    <label>Message:</label>
+    <textarea name="message" id="message"></textarea>
+  </div>
+
+    <div class="form-group">
+    <input class="button"  type="submit" id="sub" value="submit" name="button">
+</div>
+
+
+ 
+    
+    <div class="image1">
+          <img src="phone.jpg">
+  </div>
+</div>
+</h4>
+</h4>
+</form>
+<div class="map">
+  <h6>Map for direction</h6>
+          <img src="map.jpg">
+        </div>
+
+
+<div class="footer-group">
+      <div class="copyright">Jimmy Shrestha Copyright &copy; 2020.  All rights reserved </div>
+    </footer>
+</div>
+
+
+
+
+  <script type="text/javascript">
+	
+
+      const firstName=document.getElementById('fname')
+      const lastName=document.getElementById('lname')
+      const Age=document.getElementById('age')
+      const gender =document.getElementById('gender')
+       const Email=document.getElementById('email')
+       const Message=document.getElementById('message')
+
+      sub.addEventListener('click', ()=>{
+        
+        let data={'firstname':fname.value,
+        'lastname':lname.value,'age':age.value,'gender':gender.value,'email':email.value,'message':message.value}
+        alert('Thanks for Submitting.'+lname.value)
+        localStorage.setItem('key',JSON.stringify(data))
+      })
+    
+
+      
+    </script>
+
+
+</body>
+
+
+    </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="cover.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container row">
+      <div class="page-title">
+        <h1>SKM Care</h1>
+        <div class="logo">
+          <img src="hospital logo.jpg">
+        </div>
+      </div>
+
+      <nav class="main-nav">
+       <a  class="active" href="home.html">HOME</a>
+  <a  class="active" href="services.html">SERVICES</a>
+  <a   class="active"href="contact.html">CONTACT</a>
+  <a class="active" href="community.html">COMMUNITY</a>
+  <a class="active" href="videos.html">VIDEOS</a>
+      </nav>
+
+    </div>
+  </header>
+ <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="care.jpg" style="width:100%;height:50%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="care1.jpg" style="width:100%;height:30%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="care2.jpg" style="width:100%;height:50%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+  
+
+   <section class="general-block">
+
+              <div class="info-block">
+                <div class="info-header">
+  <h2> ABOUT US </h2>
+  <p>SKM Care Kathmandu is a multi-specialty hospital that offers preventive and curative healthcare services. It was established with a motive “Care to Cure” in March ,2001. It began as an idea of a patient-oriented, socially responsible center, making superior quality healthcare services convenient and accessible for the community it serves. It aims to meet all healthcare needs of the nation through unparalleled patient care and wellness programs.Here,German Doctor provides the services in very low prices as well</p>
+</div>
+</div>
+</section>
+
+
+
+
+<div class="row">
+  <div class="column" style="background-color:#ccccff;height:60%">
+    <img src="doct.jpg" alt="doctor face" width="200px" height="auto" class="center">
+    <h2>Why choose us?</h2>
+    <p>We have 50 years of Medical Experience and it is the project of interplast Germany foundation with the very minimal and without cost to the poor patients</p>
+  </div>
+
+  <div class="column" style="background-color:#ccccff;height:60%">
+    <img src="help.jpg" alt="doctor face" width="200px" height="auto" class="center">
+    <h2>Services Provided</h2>
+    <li> Qualified Doctor</li>
+    <li> Emergency Help</li>
+    <li>Low Budget Cost</li>
+    <li> Modern Equipment</li>
+  </div>
+
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="blood.jpg" alt="blood" style="width:100%;height:320px;">
+    </div>
+<div class="flip-card-back">
+      <h2>Blood</h2> 
+      <p>Give Blood Save Life</p> 
+      <p>Every blood donor is a life saver</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer-group">
+      <div class="copyright">Jimmy Shrestha Copyright &copy; 2020. All rights reserved
+        </div>
+
+      
+    </footer>
+</div>
+
+  
+</body>
+  
+
+</html>
+
+
+
